@@ -33,7 +33,7 @@ Idioma
 <input type="text" id="idioma" name="idioma" value="${libro.idioma)"> 
 <br/>
 Fecha de publicacion
-<input type="date" id="fechapublicacion" name="fechapublicacion" value="${libro.fechapublicacion)"> 
+<input type="date" id="fechapublicacion" name="fechapublicacion" value="${fn:substring{libro.fechapublicacion,0,10)}"> 
 <br/>
 Tipo pasta
 <input type="text" id="tipoPasta" name="tipoPasta" value="${libro.tipoPasta)"> 
@@ -53,20 +53,28 @@ Presentacion
 precio
 <input type="number"  id="precio" name="precion" value="${libro.precio)"> 
 <br/>
+
 Categoria
+<select="idCategoria" name="idCategoria">
+<c:forEach var="item" items="${categoria }">
+<option value ="${item.idCategoria}" ${item.idCategoria ==libro.categoria.idCtegoria'selected': '' }> ${item. categoria } </option>
+</c:forEach>
+</select>
+
+Autor
+<select="idAutores" name="idAutores">
+<c:forEach var="item" items="${autor }">
+<option value ="${item.idAutor}"> ${item.nombre} ${item.apellido}</option>
+</c:forEach>
+</select>
+<button type="submit" onclick="">Guardar </buttom>
+<button type="submit" onclick="window.location.href='/ismac-libreria1/libros/findAll´; return false;">cancelar </buttom>
+</button>
 
 <select id="idCategoria" name="idCategoria">
    <option value="1"> 1 </option>
     <option value="2"> 2</option>
      <option value="3"> 3</option>
-
-</select>
-
-Autor
-<select id="idAutor" name="idAutor">
-   <option value="1"> 5 </option>
-    <option value="2"> 6</option>
-     <option value="3"> 7</option>
 
 </select>
 

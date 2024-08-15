@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -67,7 +68,7 @@ public class LibroController {
 				,@RequestParam ("numPaginas") @Nullable Integer numPaginas
 				,@RequestParam ("edicion") @Nullable String edicion
 				,@RequestParam ("idioma") @Nullable String idioma
-				,@RequestParam ("fechaPublicacion") @Nullable Date fechaPublicacion
+				,@RequestParam ("fechaPublicacion") @Nullable @DateTimeFormat(pattern ="yyyy-MM-dd") Date fechaPublicacion
 				,@RequestParam ("descripcion") @Nullable String descripcion
 				,@RequestParam ("tipoPasta") @Nullable String tipoPasta
 				,@RequestParam ("ISBN") @Nullable String ISBN
@@ -97,13 +98,13 @@ public class LibroController {
 	}
 	
 
-	return "redirect:/libros/libros-listar";
+	return "redirect:/libros/findAll";
 
 }
 	@GetMapping("/dell")
 	public String del(@RequestParam("idLibro") @Nullable Integer idLibro) {
 		libroDAO.del(idLibro);
-		return "redirect:/libros/libros-listar";
+		return "redirect:/libros/findAll";
 	}
 }
 		
