@@ -41,9 +41,10 @@ public class AutorController {
 //		//TODO: handle exception
 //		e.printStackTrace();
 //	  }
-	////hola mundo 
-		////perodon 
-		/////el ismac  es dificil
+	
+		////deber de casa
+		////ya no se que hacer 
+		
 		
 	}
 	
