@@ -62,9 +62,9 @@
 						<td> ${item.numEjemplares}</td>
 						<td> 
 							<img alt="Portada de libro" width="100" height="200" src="${pageContext.request.contextPath}/resources/img/${item.portada}" />
-						</td>
-						<td> ${item.presentacion}</td>
-						<td> ${item.precio}</td>
+						////</td>
+						////<td> ${item.presentacion}</td>
+						////<td> ${item.precio}</td>
 						<td> ${item.categoria.categoria}</td>
 						<td> ${item.autor.nombre} ${item.autor.apellido}</td>
 						<td> 
