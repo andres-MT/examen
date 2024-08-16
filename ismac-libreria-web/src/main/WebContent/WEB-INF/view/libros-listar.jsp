@@ -70,14 +70,13 @@
 						<td> 
 							
 							
-							<button onclick="window.location.href='/ismac-libreria/libros/findOne?idlibro=${item.idlibro}opcion=1'; return false;"> 
-							actualizar
+<button onclick="window.location.href='/ismac-libreria/libros/findOne?idlibro=${item.idlibro}&opcion=1';">
+    Actualizar
 </button>
 	
 	
-			<button onclick="window.location.href='/ismac-libreria/libros/findOne?idlibro=${item.idlibro}opcion=2'; return false;"> 
-			
-			Eliminar
+<button onclick="if(confirm('¿Estás seguro de que deseas eliminar este libro?')) { window.location.href='/ismac-libreria/libros/findOne?idlibro=${item.idlibro}&opcion=2'; }"> 
+    Eliminar
 </button>
 	
 					
