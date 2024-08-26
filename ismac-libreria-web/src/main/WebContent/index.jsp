@@ -5,8 +5,10 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+<link rel="styLesheet"  href="${pageContext.request.contextPath}/resources/css/estilos.css"/>
+
 </head>
 <body>
-	<h1>HOLA MUNDO  !!</h1>
+	<h1>HOLA MUNDO  desde JSP !!</h1>
 </body>
 </html>

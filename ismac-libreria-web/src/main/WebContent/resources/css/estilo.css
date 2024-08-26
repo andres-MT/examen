@@ -1,0 +1,7 @@
+@charset "ISO-8859-1";
+element.style{
+	padding-left: 50px;
+	padding-right: 50px;
+	background: aqua;
+	font-family : cursive;
+}
